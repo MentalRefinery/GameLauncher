@@ -24,5 +24,19 @@ namespace GameLauncher
         {
             InitializeComponent();
         }
+
+        private void PlayButton_Click(object sender, RoutedEventArgs e)
+        {
+            Launcher.PlayGame();
+        }
+
+        private void PatchNotesButton_Click(object sender, RoutedEventArgs e)
+        {
+            Launcher.LaunchWebsite("https://www.linkedin.com/in/mental-refinery-15732b198/");
+        }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+           
+        }
     }
 }

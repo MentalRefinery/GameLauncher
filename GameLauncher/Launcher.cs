@@ -9,5 +9,13 @@ namespace GameLauncher
 {
     class Launcher
     {
+        public static void PlayGame()
+        {
+            Process.Start("Cha-Cha.exe");
+        }
+        public static void LaunchWebsite(string url)
+        {
+            Process.Start(url);
+        }
     }
 }
