@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using GameLauncher.Views;
 
 namespace GameLauncher
 {
@@ -24,7 +25,7 @@ namespace GameLauncher
         {
             InitializeComponent();
         }
-
+        public Main MainView { get; set; }
         private void PlayButton_Click(object sender, RoutedEventArgs e)
         {
             Launcher.PlayGame();

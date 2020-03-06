@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 
 namespace GameLauncher.Domain
-{
+{ 
+ 
     public class User
     {
+        public User()
+        {
+            UserId = Guid.NewGuid().ToString().Split('-')[4];
+        }
         public string UserId { get; set; }
         public string Name { get; set; }
         public DateTime TimeCreated { get; set; }

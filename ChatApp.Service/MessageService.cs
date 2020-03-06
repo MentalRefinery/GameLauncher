@@ -12,7 +12,7 @@ namespace ChatApp.Service
     {
         private IMessageServiceCallback _callBack = null;
         private ObservableCollection<User> _users;
-        private Dictionary<string, IMessageServiceCallback> _clients;
+        private readonly Dictionary<string, IMessageServiceCallback> _clients;
 
         public MessageService()
         {
@@ -28,6 +28,8 @@ namespace ChatApp.Service
                 _clients.Add(user.UserId, _callBack);
                 _users.Add(user);
                 _clients?.ToList().ForEach(c => c.Value.UserConnected(_users));
+                System.Console.WriteLine($"{ user.Name} Just Connected");
+
             }
         }
 
